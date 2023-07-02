@@ -1,0 +1,22 @@
+<!-- otpVerification.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTP Verification</title>
+</head>
+<body>
+  <h1>OTP Verification</h1>
+
+  <% if (error) { %>
+    <p><%= error %></p>
+  <% } %>
+
+  <form action="/verify" method="POST">
+    <input type="hidden" name="email" value="<%= email %>">
+    <label for="otp">Enter OTP:</label>
+    <input type="text" id="otp" name="otp" required pattern="[0-9]{6}" title="Please enter a 6-digit OTP">
+    <button type="submit">Verify OTP</button>
+  </form>
+</body>
+</html>
