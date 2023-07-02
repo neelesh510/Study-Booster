@@ -1,0 +1,48 @@
+
+.home{
+    position: absolute;
+    background: url('../images/about.jpg') no-repeat center/cover;
+    height: 1000px;
+    top:0px;
+    left:0px;
+    width: 100%;
+    z-index: -1;
+    opacity:0.89;
+}
+
+.extra{
+    height: 1000px;
+}
+
+.Container{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    height: 1000px;
+    /* background-color: aqua; */
+    text-align: center;
+}
+.extra{
+    height: 850px;
+    margin-bottom: 100px;
+}
+
+.box{
+    margin: 10px 10px 10px 10px;
+    height: 30rem;
+    width : 30rem;
+    border-radius: 50%;
+    background-color: aliceblue;
+    display: inline-table;
+}
+
+#box1{
+    background: url('../images/aboutus2.webp') no-repeat center/cover
+}
+#box2{
+    background: url('../images/boxoffice.png')  no-repeat center/cover
+}
+#box3{
+    background: url('../images/login.webp')  no-repeat center/cover
+}
+
+

@@ -1,0 +1,36 @@
+a{
+    cursor: pointer;
+}
+
+.footer{
+
+    text-align: center;
+    background-color: #17a2b8;
+}
+
+.foot_container{
+    margin-top: 0px;
+    text-align: center;
+    display: inline-block;
+}
+
+.zero{
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    height: 29px;
+    width: 31px;
+    border-radius: 50%;
+    display: inline-table;
+    cursor: pointer;
+}
+
+#fb{
+    background: url('../images/facebook-logo-icon-file-facebook-icon-svg-wikimedia-commons-4.png')  no-repeat center/cover
+}
+#tw{
+    background: url('../images/twitter-icon-circle-png-logo-8.png') no-repeat center/cover
+}
+#ig{
+    background: url('../images/logo-ig-png-instagram-logo-camel-productions-website-25.png')    no-repeat center/cover
+}
