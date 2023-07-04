@@ -1,9 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Registration or Sign Up form in HTML CSS | CodingLab </title> 
+    <title> Study Booster </title> 
     <link rel="stylesheet" href="css/signup.css">
    </head>
 <body>
@@ -13,7 +14,7 @@
     <div class="body">
         <div class="wrapper">
             <h2>Registration</h2>
-            <form action="#" method="post">
+            <form action="/signup" method="post">
                 <div class="input-box">
                     <input type="text" placeholder="Enter your name"  name = "name">
                 </div>
@@ -26,16 +27,12 @@
                 <div class="input-box">
                     <input type="password" placeholder="Confirm password" name = "cpassword">
                 </div>
-                <label class="text">  
-                    Accout Type :
-                    </label>  
-                    <input type="radio" id="Creater" name="Accout Type" value="Creater"/> Instructor    
-                    <input type="radio" id="Student" name="Accout Type" value="Student"/> Student  
-                    <input type="radio" id="Admin" name="Accout Type" value="Admin"/>Admin <br/>   
-                <!-- <div class="policy">
-                    <input type="checkbox">
-                    <h3>I accept all terms & condition</h3>
-                </div> -->
+                <label for="AccountType">Account Type</label>
+    <select id="AccountType" name="AccountType">
+      <option value="Student">Student</option>
+      <option value="Instructor">Instructor</option>
+      <option value="Admin">Admin</option>
+    </select>
                 <div class="input-box button">
                     <input type="Submit" value="Register Now">
                 </div>
