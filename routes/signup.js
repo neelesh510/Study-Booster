@@ -1,23 +1,20 @@
 const express=require('express');
 const router=express.Router();
-// const flash = require("flash");
-// const session = require("express-session");
-//  const bcrypt = require("bcrypt");
-// const Users = require("../Models/Users");
-// const jwt = require("jsonwebtoken");
-// const nodemailer = require('nodemailer');
-// const otpGenerator = require('otp-generator');
-// const mailSender = require('../utils/mailSender');
-// require("dotenv").config();
-
+const flash = require("flash");
+const session = require("express-session");
+ const bcrypt = require("bcrypt");
+const Users = require("../Models/Users");
+const jwt = require("jsonwebtoken");
+const nodemailer = require('nodemailer');
+const otpGenerator = require('otp-generator');
+const mailSender = require('../utils/mailSender');
+require("dotenv").config();
 // const { route } = require('./home');
 
 router.get('/',(req,res)=>{
     
     res.render("signup.ejs");
 })
-
-/*
  
 router.post('/',async(req,res)=>{
     try {
@@ -28,7 +25,7 @@ router.post('/',async(req,res)=>{
 			email,
 			password,
 			cpassword,
-			
+			AccountType,
 		} = req.body;
 		// Check if All Details are there or not
 		if (
@@ -36,8 +33,8 @@ router.post('/',async(req,res)=>{
 			!name||
 			!email ||
 			!password ||
-			!cpassword
-			
+			!cpassword || 
+			!AccountType
 		) {
 			return res.status(403).send({
 				success: false,
@@ -70,6 +67,7 @@ router.post('/',async(req,res)=>{
 			name,
 			email,			
 			password: hashedPassword,
+			AccountType,
 		});
 
         const otp = otpGenerator.generate(6,
@@ -81,7 +79,7 @@ router.post('/',async(req,res)=>{
 	// Set OTP expiration to 5 minutes from now
 	const otpExpiration = new Date(Date.now() + 5 * 60000);
 
-		mailSender(email,"Verification Email",otp)
+		mailSender(email,"Verification Email for OTP ",otp)
 		    .then(() => {
 				// Save the user and OTP details to the database 
 		        user.otp=otp;
@@ -113,8 +111,8 @@ router.post('/verify', (req, res) => {
   
 	if (isOTPValid) {
 	  // Mark the user account as verified in the database
-	  // Redirect to a success page or login page
-	  res.redirect('/login');
+	  // Redirect to a success profile page 
+	  res.redirect('/profileInfo');
 	} else {
 	  // Handle invalid OTP
 	  res.render('otpVerification', { email, error: 'Invalid OTP. Please try again.' });
@@ -122,7 +120,7 @@ router.post('/verify', (req, res) => {
   });
    
   function verifyOTPFromDatabase(email, otp) {
-	return User.findOne({ email: email, otp: otp, otpExpiration: { $gt: new Date() } })
+	return Users.findOne({ email: email, otp: otp, otpExpiration: { $gt: new Date() } })
 	  .then((user) => {
 		return !!user; // Return true if a matching user is found, false otherwise
 	  })
@@ -131,5 +129,8 @@ router.post('/verify', (req, res) => {
 		return false; // Handle error and return false
 	  });
   }
-*/
+
 module.exports = router;
+
+
+
