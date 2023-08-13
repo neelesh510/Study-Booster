@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/details.css">
+  <title>Course Details</title>
+</head>
+<body>
+  <h1>Course Details</h1>
+
+  <div class="course">
+  <% if (course && instructorInfo) { %>
+    <!-- course details -->
+    <h3><%= course.courseName %></h3>
+    <p>Price: <%= course.price %></p>
+    <p>Description: <%= course.courseDescription %></p>
+    <p> What You Will Learn: <%= course.whatYouWillLearn %></p>
+    <img src="<%= course.thumbnail %>" alt="Course Thumbnail">
+  </div>
+    <!-- instructor details -->
+    <div class="instructor">
+    <% if (course.instructor) { %>
+      <p>Instructor: <%=course.instructor.name %></p>
+      <p>Email: <%= course.instructor.email %></p>
+      <p>Gender: <%= instructorInfo.gender %></p>
+      <p>Contact Number: <%= instructorInfo.contactNumber %></p>
+      <p>About: <%= instructorInfo.about %></p>
+      <img src="<%= instructorInfo.image %>" alt="InstructoImage">
+    <% } %>
+    </div>
+    <!-- button to add rating and review -->
+    <button class="ratingReviewBtn" data-courseid="<%= course._id %>">Rate and Review</button>
+  <div id="ratingReviewSection_<%= course._id %>" class="ratingReviewSection" style="display: none;">
+  <h2>Rate and Review</h2>
+   <form action="/courses/<%= course._id %>/rating-review" method="POST">
+    <label for="rating">Rating:</label>
+    <input type="number" name="rating" step="0.1" min="1" max="5" required>
+
+    <label for="review">Review:</label>
+    <textarea name="review" required></textarea>
+
+    <button type="submit">Submit</button>
+    </form>
+  </div>
+
+    <!-- showing existing rating and reviews -->
+    <div class="rating">
+     <% if (course.ratingAndReviews && course.ratingAndReviews.length > 0) { %>
+      <h4>Rating and Reviews:</h4>
+      <ul>
+        <% course.ratingAndReviews.forEach(review => { %>
+          <li>
+            <p>Rating: <%= review.rating %></p>
+            <p>Comment: <%= review.review %></p>
+          </li>
+        <% }); %>
+      </ul>
+      <% } %>
+    </div>
+    <!-- showing students enrolled to the course -->
+     <div class="studentsEnrolled">
+    <% if (course.studentsEnrolled && course.studentsEnrolled.length > 0) { %>
+      <h4>Students Enrolled:</h4>
+      <ul>
+         <% course.studentsEnrolled.forEach(student => { %>
+          <li>
+            <p>Name: <%= student.name %></p>
+            <p>Email: <%= student.email %></p>
+          </li>
+        <% }); %>
+      </ul>
+    <% } %>
+     </div>
+  <% } else { %>
+    <p>Course not found</p>
+  <% } %>
+</body>
+</html>
+
+<script>
+  // JavaScript code to handle showing/hiding the rating and review section
+
+  const ratingReviewBtn = document.querySelector('.ratingReviewBtn');
+  const courseId = "<%= course._id %>";
+  const ratingReviewSection = document.querySelector(`#ratingReviewSection_${courseId}`);
+  ratingReviewBtn.addEventListener('click', () => {
+    ratingReviewSection.style.display = 'block';
+  });
+</script>

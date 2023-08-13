@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Profile Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #008080;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="date"] {
+            width: 100%;
+            padding: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #008080;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Profile Information Form</h1>
+    <form action="/profileInfo" method="POST" enctype="multipart/form-data">
+        <label for="email">Email:</label>
+        <input type="email" name="email" required>
+
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" required>
+
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" name="dateOfBirth" required>
+
+        <label for="about">About:</label>
+        <textarea name="about" rows="4"></textarea>
+
+        <label for="contactNumber">Contact Number:</label>
+        <input type="tel" name="contactNumber">
+
+        <label for="image">Profile Image URL:</label>
+        <!-- <input type="text" name="image"> -->
+       <input type="file" name="image" placeholder="Profile Image">
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

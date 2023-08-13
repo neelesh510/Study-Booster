@@ -1,0 +1,51 @@
+
+ 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create Course</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+  
+  <div class="createCourse">
+    <div class="main">
+  <h2 style="color: beige;">Create Course</h2>
+
+  <form id="createCourse" action="/course" method="POST" enctype="multipart/form-data" >
+    <label for="courseName">Course Name</label>
+    <input type="text" id="courseName" name="courseName" required>
+
+    <label for="courseDescription">Course Description</label>
+    <textarea id="courseDescription" name="courseDescription" required></textarea>
+
+    <label for="whatYouWillLearn">What You Will Learn</label>
+    <textarea id="whatYouWillLearn" name="whatYouWillLearn"></textarea>
+
+    <label for="courseContent">Course Content</label>
+    <input type="file" id="courseContent" name="courseContent" placeholder="Video 1">
+   
+
+    <label for="price">Price</label>
+    <input type="number" id="price" name="price">
+
+    <label for="thumbnail">Thumbnail Image</label>
+    <input type="file" id="thumbnailImage"  name="thumbnailImage">
+
+    <label for="category">Category</label>
+    <input type="text" id="category" name="category">
+
+    <label for="status">Status</label>
+    <select id="status" name="status">
+      <option value="Draft">Draft</option>
+      <option value="Published">Published</option>
+    </select>
+
+    <button type="submit">Create</button>
+  </form>
+</div>
+</div>
+  <!-- <script src="script.js"></script> -->
+</body>
+</html>

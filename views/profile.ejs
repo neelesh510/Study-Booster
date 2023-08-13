@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/profile.css">
+</head>
+
+</html>
+
+<body>
+    <div>
+        <%- include('./partials/header') %>
+    </div>
+    <% if (user && userInfo) { %>
+    <div class="container emp-profile" style="margin-top: 100px;">
+        <form >
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-img">
+                        <img src="<%=userInfo.image %>" alt="userImage">
+                      
+                    </div>
+                </div> 
+                <div class="col-md-4">
+                    <!-- <div class="profile-img"> -->
+                       <h1> <a href="/courses">View Courses</a><br /></h1>
+                        <br>
+                    <!-- </div> -->
+                
+                
+                    <!-- <div class="profile-img"> -->
+                        <h2>PROFILE INFORMATION</h2>
+                      
+                    <!-- </div> -->
+                </div> 
+            </div>    
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="profile-work">
+                        <br>
+                        <h6 style="color: #fff;">Additional Details</h6>
+                        <br>
+                        <a href="">Enrolled Cources</a><br />
+                        <br>
+                        <a href="">WishList</a><br />
+                        <br>
+                        <a href="">Purchase History</a>
+                     
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>User Id</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= user.name %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>Name</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= user.name%></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= user.email %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>Phone</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= userInfo.contactNumber %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>AccountType</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= user.AccountType %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>Gender</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= userInfo.gender %></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" style="color: #dccccc;">
+                                    <label>Date Of Birth</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><%= userInfo.dateOfBirth %></p>
+                                </div>
+                            </div>
+                         
+                            <div class="row">
+                                <div class="col-md-12" style="color: #dccccc;">
+                                    <label>About</label><br />
+                                    <p><%= userInfo.about %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    <!-- </div> -->
+    <% } else { %>
+        <p>User Not Found</p>
+      <% } %>
+    <div>
+        <%- include('./partials/footer') %>
+    </div>
+</div>
+</body>

@@ -1,0 +1,20 @@
+<!-- get-allCourses.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="css/allCourses.css">
+  <title>All Courses</title>
+</head>
+<body>
+  <h1>All Courses</h1>
+  <ul>
+    <% allCourses.forEach(course => { %>
+      <li>
+        <h3><%= course.courseName %></h3>
+        <p>Price: <%= course.price %></p>
+        <img src="<%= course.thumbnail %>" alt="Course Thumbnail">
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>
