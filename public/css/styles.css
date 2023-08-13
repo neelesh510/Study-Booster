@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url("zzz.jpg");
+    background-size: auto;
+    background-position: -44px 0px;
+  }
+
+  .main {
+    margin-bottom: 20px;
+    margin: 0 auto;
+    text-align: left;
+  }
+.createCourse {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+
+  div.createCourse{
+    background-color: rgba(0,0,0,0.5);
+    width: 50%;
+    padding-top: 5px;
+   font-size: 18px;
+   border-radius: 10px;
+    border: 1px solid rgba(247, 241, 241, 0.556);
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    color: #fff; 
+}
+
+.createCategroy {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+div.createCategroy{
+  background-color: rgba(0,0,0,0.5);
+  width: 50%;
+  padding-top: 5px;
+ font-size: 18px;
+ border-radius: 10px;
+  border: 1px solid rgba(247, 241, 241, 0.556);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  color: #fff; 
+}
+
+.otpverification {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+div.otpverification{
+  background-color: rgba(0,0,0,0.5);
+  width: 50%;
+  padding-top: 5px;
+ font-size: 18px;
+ border-radius: 10px;
+  border: 1px solid rgba(247, 241, 241, 0.556);
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+  color: #fff; 
+}
+  
+  
+  
+
+   h2 {
+    margin-top: 0;
+    text-align: center;
+    color: #f3ebeb;
+  }
+  
+ label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+
+    input[type="text"],
+   textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+  .createCourse input[type="file"] {
+    margin-top: 5px;
+  }
+
+  .createCourse select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  
+   button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+     button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+
+  
+
+  
+
+  
+  
+  
+  /*.createCategroy button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .createCategroy button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
+  

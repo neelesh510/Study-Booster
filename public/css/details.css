@@ -1,0 +1,139 @@
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    justify-content: center;
+  }
+  
+  /* Heading styles */
+  h1 {
+    color: #008080;
+  }
+  
+  h3 {
+    color: #004080;
+  }
+  
+  /* Course details styles */
+  .course {
+    margin-bottom: 20px;
+  }
+  
+  .course img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Instructor details styles */
+  .instructor {
+    margin-bottom: 20px;
+  }
+  
+  .instructor img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+  
+  /* Rating and Review Button styles */
+  .ratingReviewBtn {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  /* Rating and Review Section styles */
+  .ratingReviewSection {
+    margin-top: 20px;
+  }
+  
+  .ratingReviewSection h2 {
+    color: #008080;
+  }
+  
+  .ratingReviewSection form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  .ratingReviewSection input[type="number"],
+  .ratingReviewSection textarea {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .ratingReviewSection button[type="submit"] {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  /* Rating styles */
+  .rating {
+    margin-bottom: 20px;
+  }
+  
+  .rating h4 {
+    color: #004080;
+  }
+  
+  .rating ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .rating ul li {
+    margin-bottom: 10px;
+  }
+  
+/* Students Enrolled Section Styles */
+.studentsEnrolled {
+    margin-bottom: 20px;
+  }
+  
+  .studentsEnrolled h4 {
+    color: #004080;
+  }
+  
+  .studentsEnrolled ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .studentsEnrolled ul li {
+    margin-bottom: 20px;
+    width: 200px; /* Adjust this value to control the width of each student block */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .studentsEnrolled ul li p {
+    margin: 5px 0;
+  }
+  
+  /* Additional style for student names */
+  .studentsEnrolled ul li p.name {
+    font-weight: bold;
+    color: #008080;
+  }
+  
+  /* Additional style for student email */
+  .studentsEnrolled ul li p.email {
+    color: #555;
+  }
+  
